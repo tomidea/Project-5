@@ -36,7 +36,7 @@ On mysql server install MySQL Server software.
   Create a user on mysql-server
   *sudo mysql*
  
-  *mysql>CREATE USER 'firstuser'@'localhost' IDENTIFIED BY 'pass123';*
+  *mysql>CREATE USER 'db_user'@'%' IDENTIFIED BY 'pass123';*
   img
   
   Create a database
@@ -61,6 +61,6 @@ On mysql server install MySQL Server software.
   *sudo systemctl restart mysql*
   
   From mysql client Linux Server connect remotely to mysql server Database Engine with the mysql utility 
-  
-  
+  mysql -u db_user -h 172.31.5.218 -p
+  img
   
